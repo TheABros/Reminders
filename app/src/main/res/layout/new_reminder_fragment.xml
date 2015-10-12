@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/NewReminderFragmentTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/title_hint"/>
+
+    <LinearLayout
+        android:id="@+id/NewReminderFragmentLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NewReminderFragmentTitleEditText"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Due on"
+            style="@android:style/Widget.Material.Spinner"
+            android:paddingRight="8dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/NewReminderFragmentTimePicker"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Due at"
+            style="@android:style/Widget.Material.Spinner"
+            android:paddingLeft="8dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/NewReminderFragmentSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save"
+        android:layout_below="@+id/NewReminderFragmentLinearLayout"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
